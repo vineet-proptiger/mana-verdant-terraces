@@ -192,13 +192,14 @@ const Navbar = ({ setIsOpen }) => {
           opacity: 1 !important;
           flex: 0 0 auto !important;
           flex-shrink: 0 !important;
-          min-width: 230px !important;
-          max-width: 245px !important;
-          height: 50px !important;
-          background-color: #fff !important;
+          min-width: 250px !important;
+          max-width: 280px !important;
+          height: 52px !important;
+          background-color: #000000 !important;
+          border: 1px solid rgba(255, 255, 255, 0.25) !important;
           padding: 4px 12px !important;
           border-radius: 10px !important;
-          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12) !important;
+          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
           margin: 0 16px !important;
           transition: box-shadow 0.3s ease, margin 0.55s cubic-bezier(0.16, 1, 0.3, 1) !important;
           display: flex !important;
@@ -264,14 +265,14 @@ const Navbar = ({ setIsOpen }) => {
         .header_style2.sticky .nav-logo,
         .header_style2.scrolled-up-expanded .nav-logo {
           height: 42px !important;
-          min-height: 42px !important;
-          max-height: 44px !important;
-          max-width: 295px !important;
-          width: 100% !important;
+          min-height: 38px !important;
+          max-height: 46px !important;
+          max-width: 100% !important;
+          width: auto !important;
           flex-shrink: 0 !important;
           display: block;
           object-fit: contain;
-          transform: scale(1.05) !important;
+          transform: scale(1.18) !important;
           transform-origin: center center !important;
           transition: transform 0.2s ease !important;
         }
@@ -302,19 +303,21 @@ const Navbar = ({ setIsOpen }) => {
             gap: 4px;
           }
           .header_style2 .header_navigation2 .navbar-logo {
-            min-width: 175px !important;
-            max-width: 185px !important;
+            min-width: 200px !important;
+            max-width: 220px !important;
             padding: 3px 8px !important;
-            height: 40px !important;
+            height: 44px !important;
+            background-color: #000000 !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
             margin: 0 8px !important;
           }
           .nav-logo,
           .header_style2.sticky .nav-logo,
           .header_style2.scrolled-up-expanded .nav-logo {
-            height: 32px !important;
-            min-height: 32px !important;
-            max-width: 225px !important;
-            transform: scale(1.03) !important;
+            height: 36px !important;
+            min-height: 34px !important;
+            max-width: 100% !important;
+            transform: scale(1.15) !important;
           }
         }
 
@@ -339,20 +342,22 @@ const Navbar = ({ setIsOpen }) => {
             letter-spacing: 0.6px !important;
           }
           .header_style2 .header_navigation2 .navbar-logo {
-            min-width: 220px !important;
-            max-width: 230px !important;
+            min-width: 240px !important;
+            max-width: 260px !important;
             padding: 4px 10px !important;
-            height: 46px !important;
+            height: 48px !important;
+            background-color: #000000 !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
             margin: 0 12px !important;
           }
           .nav-logo,
           .header_style2.sticky .nav-logo,
           .header_style2.scrolled-up-expanded .nav-logo {
-            height: 38px !important;
+            height: 40px !important;
             min-height: 38px !important;
-            max-height: 40px !important;
-            max-width: 280px !important;
-            transform: scale(1.05) !important;
+            max-height: 42px !important;
+            max-width: 100% !important;
+            transform: scale(1.15) !important;
           }
         }
 
@@ -457,8 +462,9 @@ const Navbar = ({ setIsOpen }) => {
           .header_style2.scrolled-up-expanded {
             top: 0 !important;
             padding: 12px 0 !important;
-            background: #fff !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+            background: #000000 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
             transition: none !important;
           }
           
@@ -499,6 +505,8 @@ const Navbar = ({ setIsOpen }) => {
             visibility: visible !important;
             padding: 0 !important;
             background: transparent !important;
+            border: none !important;
+            outline: none !important;
             box-shadow: none !important;
             margin: 0 !important;
             border-radius: 0 !important;
@@ -547,17 +555,18 @@ const Navbar = ({ setIsOpen }) => {
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #412011;
-            width: 44px;
-            height: 44px;
+            color: #ffffff;
+            width: 42px;
+            height: 42px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             z-index: 60;
             transition: all 0.3s ease;
-            background: transparent;
-            border-radius: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
           }
           
           .header_style2.sticky .mob_nav_trigger,

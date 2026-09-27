@@ -28,9 +28,9 @@ export default function PrivacyPolicy() {
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
           <Link href="/" className="flex items-center">
             <style>{`
-              .privacy-logo { height: 48px; width: auto; display: block; object-fit: contain; transform-origin: left center; }
+              .privacy-logo { height: 42px; width: auto; display: block; object-fit: contain; background-color: #000; padding: 4px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); transform-origin: left center; }
               @media(max-width: 768px) {
-                .privacy-logo { height: 40px; transform-origin: left center; }
+                .privacy-logo { height: 36px; padding: 3px 8px; transform-origin: left center; }
               }
             `}</style>
             <img src={logoImages.main} alt="Mana Verdant Terraces" className="privacy-logo" />
