@@ -66,7 +66,7 @@ export default function Home() {
 
       {/* Floating Vertical Enquire Tab — Desktop only */}
       <div 
-        className="hidden lg:flex fixed z-50 cursor-pointer text-white uppercase text-[14px] leading-[20px] font-bold tracking-[0.4px] whitespace-nowrap bg-[#B88A44] items-center justify-center gap-[6px] hover:bg-[#946B2D] hover:text-white transition-colors duration-300"
+        className="hidden lg:flex fixed z-50 cursor-pointer text-white uppercase text-[14px] leading-[20px] font-bold tracking-[0.4px] whitespace-nowrap bg-[#000000] border-l border-t border-b border-white/40 items-center justify-center gap-[6px] hover:bg-[#1F2937] hover:text-white transition-colors duration-300 shadow-2xl"
         style={{
           top: '50%',
           right: '10px',
@@ -74,7 +74,7 @@ export default function Home() {
           transform: 'translateY(-50%) rotate(180deg)',
           borderRadius: '50px',
           padding: '18px 11px',
-          boxShadow: '0 0 12px 0 rgba(0,0,0,0.15)'
+          boxShadow: '0 0 16px 0 rgba(0,0,0,0.5)'
         }}
         onClick={() => setIsOpen(true)}
       >
@@ -119,11 +119,11 @@ export default function Home() {
           onClick={() => setIsOpen(true)}
           className="flex-grow flex items-center justify-center gap-2 py-3 px-4 rounded-full"
           style={{
-            background: 'linear-gradient(135deg, #d8be8d 0%, #b89552 100%)',
-            color: '#13192b',
+            background: '#ffffff',
+            color: '#000000',
             border: 'none',
             outline: 'none',
-            boxShadow: '0 4px 12px rgba(201, 169, 110, 0.2)'
+            boxShadow: '0 4px 12px rgba(255, 255, 255, 0.2)'
           }}
         >
           <svg className="w-[18px] h-[18px] sm:w-5 sm:h-5 animate-enquire-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">

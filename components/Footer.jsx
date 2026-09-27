@@ -7,7 +7,7 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
 const Footer = () => (
-  <footer className="relative bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/footer/footer.webp')", backgroundColor: '#412011', color: '#fff' }}>
+  <footer className="relative bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/footer/footer.webp')", backgroundColor: '#0A0A0A', color: '#fff' }}>
     {/* Removed blue overlay as requested */}
 
     <div className="relative z-10">
@@ -23,7 +23,7 @@ const Footer = () => (
           Landmark Integrated Development — Doddakanahalli, Varthur Hobli, Sarjapur ORR Tech Corridor, Bengaluru
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
-          <span style={{ width: '36px', height: '2.5px', background: '#B88A44', borderRadius: '2px' }} />
+          <span style={{ width: '36px', height: '2.5px', background: '#ffffff', borderRadius: '2px' }} />
         </div>
         <div style={{ fontSize: '15px', color: '#fff', fontFamily: 'var(--font-poppins), sans-serif', lineHeight: 1.8, marginBottom: '24px', textAlign: 'justify' }}
           data-aos="fade-in" data-aos-delay="100">
@@ -46,7 +46,7 @@ const Footer = () => (
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
           
           <span style={{ color: '#444' }}>|</span>
-          <Link href="/privacy-policy" style={{ fontSize: '13px', color: '#B88A44', fontFamily: F_SANS }}>
+          <Link href="/privacy-policy" style={{ fontSize: '13px', color: '#ffffff', fontFamily: F_SANS }}>
             Privacy Policy
           </Link>
         </div>

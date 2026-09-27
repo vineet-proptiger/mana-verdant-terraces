@@ -229,14 +229,14 @@ const ContactCTA = () => {
                 {error && <p style={{ color: 'red', fontSize: '12px' }}>{error}</p>}
 
                 <label style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', cursor: 'pointer', textAlign: 'left', marginTop: '4px' }}>
-                  <input type="checkbox" required defaultChecked style={{ accentColor: GOLD, marginTop: '2px', flexShrink: 0 }} />
+                  <input type="checkbox" required defaultChecked style={{ accentColor: '#000000', marginTop: '2px', flexShrink: 0 }} />
                   <span style={{ fontSize: '11px', color: '#666', fontFamily: F_SANS, lineHeight: 1.5 }}>
                     I authorize the developer &amp; its representatives to contact me via Email / SMS / WhatsApp / Call.
                   </span>
                 </label>
 
                 <button type="submit" disabled={loading}
-                  className="w-full py-4 mt-2 text-sm font-bold tracking-widest uppercase transition-all duration-300 rounded-lg bg-[#B88A44] text-white hover:bg-[#B88A44] cursor-pointer"
+                  className="w-full py-4 mt-2 text-sm font-bold tracking-widest uppercase transition-all duration-300 rounded-lg bg-[#000000] text-white hover:bg-neutral-800 cursor-pointer"
                   style={{ fontFamily: F_SANS }}>
                   {loading ? 'Submitting...' : 'Send'}
                 </button>

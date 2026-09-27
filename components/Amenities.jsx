@@ -180,7 +180,7 @@ const Amenities = () => {
           font-weight: 700;
           text-transform: capitalize;
           color: transparent;
-          -webkit-text-stroke: 1px #B88A44;
+          -webkit-text-stroke: 1px #000000;
           margin: 0;
           line-height: 1.2;
           font-family: "Montserrat", sans-serif;
@@ -190,8 +190,8 @@ const Amenities = () => {
         .fill_text {
           background: linear-gradient(
             90deg,
-            #B88A44 0%,
-            #B88A44 var(--fill-progress, 0%),
+            #000000 0%,
+            #000000 var(--fill-progress, 0%),
             transparent var(--fill-progress, 0%),
             transparent 100%
           );
@@ -231,7 +231,7 @@ const Amenities = () => {
         }
 
         .amenities-box:focus-visible {
-          outline: 3px solid #B88A44;
+          outline: 3px solid #000000;
           outline-offset: 4px;
         }
 
@@ -251,8 +251,8 @@ const Amenities = () => {
           width: 44px;
           height: 44px;
           border-radius: 50%;
-          background: #d9c28a;
-          box-shadow: 0 6px 18px rgba(0, 2, 66, 0.18);
+          background: #000000;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
           transition: background 0.25s ease, transform 0.25s ease;
         }
 
@@ -266,7 +266,7 @@ const Amenities = () => {
 
         .amenities-slider .slick-prev:before,
         .amenities-slider .slick-next:before {
-          color: #1A2024;
+          color: #ffffff;
           font-family: Arial, sans-serif;
           font-size: 32px;
           line-height: 1;
@@ -286,7 +286,7 @@ const Amenities = () => {
         .amenities-slider .slick-prev:focus,
         .amenities-slider .slick-next:hover,
         .amenities-slider .slick-next:focus {
-          background: #1A2024;
+          background: #1f2937;
           transform: translateY(-50%) scale(1.06);
         }
 
@@ -294,7 +294,7 @@ const Amenities = () => {
         .amenities-slider .slick-prev:focus:before,
         .amenities-slider .slick-next:hover:before,
         .amenities-slider .slick-next:focus:before {
-          color: #d9c28a;
+          color: #ffffff;
         }
 
         .amenities-box img {
@@ -344,12 +344,12 @@ const Amenities = () => {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background: #d9c28a;
+          background: #d1d5db;
           opacity: 1;
         }
 
         .amenities-slider .slick-dots li.slick-active button:before {
-          background: #1A2024;
+          background: #000000;
           opacity: 1;
         }
 

@@ -36,9 +36,9 @@ module.exports = {
         jost:  ['var(--font-jost)',  'Montserrat',   'sans-serif'],
       },
       boxShadow: {
-        'brand-sm': '0 2px 8px rgba(65, 32, 17, 0.08)',
-        'brand-md': '0 8px 24px rgba(65, 32, 17, 0.14)',
-        'brand-lg': '0 20px 48px rgba(65, 32, 17, 0.18)',
+        'brand-sm': '0 2px 8px rgba(0, 0, 0, 0.08)',
+        'brand-md': '0 8px 24px rgba(0, 0, 0, 0.14)',
+        'brand-lg': '0 20px 48px rgba(0, 0, 0, 0.18)',
         'card':   '0 4px 20px rgba(0,0,0,0.07)',
       },
       keyframes: {
@@ -56,8 +56,8 @@ module.exports = {
           to:   { opacity: '1', transform: 'translateY(0)'    },
         },
         pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 0 0   rgba(65, 32, 17, 0.45)' },
-          '50%':      { boxShadow: '0 0 0 12px rgba(65, 32, 17, 0)'   },
+          '0%, 100%': { boxShadow: '0 0 0 0   rgba(0, 0, 0, 0.45)' },
+          '50%':      { boxShadow: '0 0 0 12px rgba(0, 0, 0, 0)'   },
         },
         shimmer: {
           '0%':   { backgroundPosition: '-200% center' },

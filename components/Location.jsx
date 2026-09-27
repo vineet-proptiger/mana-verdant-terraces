@@ -51,19 +51,19 @@ const Location = () => {
           {/* RIGHT — Architectural Transit Line Card (Concept 2 - Exact Original Size) */}
           <div className="w-full lg:w-[46%] lg:order-2" data-aos="fade-left" data-aos-duration="1000">
             <div 
-              className="p-3.5 sm:p-5 lg:px-6 lg:py-[18px] rounded-2xl bg-white border border-[#E8DEC8] shadow-[0_12px_32px_rgba(0,2,66,0.12)] flex flex-col h-full justify-between"
+              className="p-3.5 sm:p-5 lg:px-6 lg:py-[18px] rounded-2xl bg-white border border-gray-200 shadow-[0_12px_32px_rgba(0,0,0,0.12)] flex flex-col h-full justify-between"
             >
               <div>
                 {/* Header Title & Origin Badge */}
-                <div className="flex flex-wrap items-center justify-between gap-y-2 gap-x-3 pb-2.5 mb-3.5 border-b-2 border-[#B88A44]">
+                <div className="flex flex-wrap items-center justify-between gap-y-2 gap-x-3 pb-2.5 mb-3.5 border-b-2 border-black">
                   <h3 
                     className="text-[14.5px] sm:text-[17px] font-bold text-[#1A2024] tracking-wide uppercase flex items-center gap-1.5 sm:gap-2 m-0"
                     style={{ fontFamily: F_JOST }}
                   >
-                    <MapPin size={20} className="text-[#B88A44] shrink-0" />
+                    <MapPin size={20} className="text-black shrink-0" />
                     <span>SEAMLESS CONNECTIVITY</span>
                   </h3>
-                  <span className="text-[11px] font-bold text-[#B88A44] bg-[#FDFBF7] px-2.5 py-0.5 rounded-full border border-[#E8DEC8] whitespace-nowrap shrink-0 inline-flex items-center gap-1 shadow-2xs">
+                  <span className="text-[11px] font-bold text-black bg-gray-100 px-2.5 py-0.5 rounded-full border border-gray-200 whitespace-nowrap shrink-0 inline-flex items-center gap-1 shadow-2xs">
                     📍 Origin: Mana Verdant Terraces
                   </span>
                 </div>
@@ -74,7 +74,7 @@ const Location = () => {
                   <div 
                     className="absolute left-[11px] top-2 bottom-3 w-[2px] rounded-full pointer-events-none"
                     style={{
-                      background: 'linear-gradient(to bottom, #412011 0%, #B88A44 60%, #D4A762 100%)'
+                      background: 'linear-gradient(to bottom, #000000 0%, #4b5563 100%)'
                     }}
                   />
 
@@ -85,12 +85,12 @@ const Location = () => {
                     >
                       {/* Station Node Marker */}
                       <div className="absolute -left-6 w-[24px] flex items-center justify-center pointer-events-none">
-                        <span className="w-[10px] h-[10px] rounded-full bg-white border-[2.5px] border-[#B88A44] group-hover:scale-125 group-hover:border-[#B88A44] transition-transform duration-200 shadow-xs" />
+                        <span className="w-[10px] h-[10px] rounded-full bg-white border-[2.5px] border-black group-hover:scale-125 group-hover:border-black transition-transform duration-200 shadow-xs" />
                       </div>
 
                       {/* Landmark Name */}
                       <span 
-                        className="text-[14.5px] font-semibold text-gray-800 group-hover:text-[#B88A44] transition-colors pl-1"
+                        className="text-[14.5px] font-semibold text-gray-800 group-hover:text-black transition-colors pl-1"
                         style={{ fontFamily: F_SANS }}
                       >
                         {item.name}
@@ -98,7 +98,7 @@ const Location = () => {
 
                       {/* Distance Time Badge */}
                       <span 
-                        className="text-[12px] font-extrabold text-[#B88A44] bg-[#FDFBF7] border border-[#E8DEC8] px-2.5 py-0.5 rounded-full whitespace-nowrap shadow-2xs ml-3"
+                        className="text-[12px] font-extrabold text-black bg-gray-100 border border-gray-200 px-2.5 py-0.5 rounded-full whitespace-nowrap shadow-2xs ml-3"
                         style={{ fontFamily: F_JOST }}
                       >
                         {item.dist}
@@ -109,11 +109,11 @@ const Location = () => {
               </div>
 
               {/* Bottom Micro Footer */}
-              {/* <div className="mt-3 pt-2.5 border-t border-[#edf4e3] flex items-center justify-between text-[11px] text-gray-500 font-medium">
+              {/* <div className="mt-3 pt-2.5 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-500 font-medium">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#B88A44] animate-pulse"></span> Prime Near ORR Exit 2, Radial Rd. 7 Corridor
+                  <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span> Prime Near ORR Exit 2, Radial Rd. 7 Corridor
                 </span>
-                <span className="text-[#B88A44] font-bold">Sarjapur</span>
+                <span className="text-black font-bold">Sarjapur</span>
               </div> */}
             </div>
           </div>
@@ -122,13 +122,13 @@ const Location = () => {
           <div className="w-full lg:flex-1 lg:order-1 flex flex-col justify-center" data-aos="fade-right" data-aos-duration="1000">
             <div style={{
               overflow: 'hidden',
-              border: '1.5px solid #B88A44',
+              border: '1.5px solid #000000',
               borderRadius: '16px',
               width: '100%',
               height: '100%',
               position: 'relative',
-              background: '#412011',
-              boxShadow: '0 12px 32px rgba(65, 32, 17, 0.18)',
+              background: '#0A0A0A',
+              boxShadow: '0 12px 32px rgba(0, 0, 0, 0.18)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -156,7 +156,7 @@ const Location = () => {
               `}</style>
               <div style={{
                 position: 'absolute', bottom: '16px', left: '16px', zIndex: 10,
-                background: '#412011', opacity: 0.95, backdropFilter: 'blur(6px)',
+                background: '#0A0A0A', opacity: 0.95, backdropFilter: 'blur(6px)',
                 borderRadius: '8px', padding: '6px 14px',
                 display: 'flex', alignItems: 'center', gap: '6px',
                 pointerEvents: 'none',

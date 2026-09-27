@@ -147,14 +147,14 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', isTransp
       <div 
         className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" 
         style={{ 
-          background: isTransparent ? 'rgba(184, 138, 68, 0.15)' : 'var(--color-gold-bg)',
-          border: isTransparent ? '2px solid #B88A44' : 'none',
-          boxShadow: isTransparent ? '0 0 20px rgba(184, 138, 68, 0.3)' : 'none'
+          background: isTransparent ? 'rgba(255, 255, 255, 0.1)' : '#f3f4f6',
+          border: isTransparent ? '2px solid rgba(255, 255, 255, 0.3)' : 'none',
+          boxShadow: isTransparent ? '0 0 20px rgba(255, 255, 255, 0.1)' : 'none'
         }}
       >
         <svg 
           className="w-8 h-8" 
-          style={{ color: isTransparent ? '#B88A44' : 'var(--color-gold-dark)' }} 
+          style={{ color: isTransparent ? '#ffffff' : '#000000' }} 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -168,15 +168,15 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', isTransp
   )
 
   const dynamicInputClass = isTransparent 
-    ? "w-full mb-3 px-4 py-2.5 bg-[#180C06]/70 text-white placeholder-gray-300 outline-none transition-all border rounded-lg focus:border-[#B88A44] focus:ring-1 focus:ring-[#B88A44]/50 focus:bg-[#180C06]/90 shadow-inner"
-    : "w-full mb-3 px-4 py-2 bg-white text-gray-900 placeholder-gray-400 outline-none transition-colors border rounded-md shadow-sm focus:border-[var(--color-gold)]";
+    ? "w-full mb-3 px-4 py-2.5 bg-[#05070B]/70 text-white placeholder-gray-300 outline-none transition-all border rounded-lg focus:border-white focus:ring-1 focus:ring-white/40 focus:bg-[#05070B]/90 shadow-inner"
+    : "w-full mb-3 px-4 py-2 bg-white text-gray-900 placeholder-gray-400 outline-none transition-colors border rounded-md shadow-sm focus:border-black";
 
   const wrapperClass = isTransparent
-    ? "w-full mb-3 bg-[#180C06]/70 text-white transition-all border rounded-lg focus-within:border-[#B88A44] focus-within:ring-1 focus-within:ring-[#B88A44]/50 focus-within:bg-[#180C06]/90 shadow-inner overflow-visible relative"
-    : "w-full mb-3 bg-white text-gray-900 transition-colors border rounded-md shadow-sm focus-within:border-[var(--color-gold)] overflow-visible relative";
+    ? "w-full mb-3 bg-[#05070B]/70 text-white transition-all border rounded-lg focus-within:border-white focus-within:ring-1 focus-within:ring-white/40 focus-within:bg-[#05070B]/90 shadow-inner overflow-visible relative"
+    : "w-full mb-3 bg-white text-gray-900 transition-colors border rounded-md shadow-sm focus-within:border-black overflow-visible relative";
 
   const dynamicInputStyle = isTransparent 
-    ? { fontFamily: F_SANS, backgroundColor: '#200E06', borderColor: 'rgba(184, 138, 68, 0.55)', color: '#ffffff' } 
+    ? { fontFamily: F_SANS, backgroundColor: '#111827', borderColor: 'rgba(255, 255, 255, 0.25)', color: '#ffffff' } 
     : { fontFamily: F_SANS, borderColor: '#e5e7eb' };
     
   return (
@@ -241,12 +241,8 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', isTransp
       {error && <p className="text-red-500 text-xs mt-[-4px] mb-2" style={{ fontFamily: F_SANS }}>{error}</p>}
 
       <button type="submit" disabled={loading}
-        className="btn-gold font-bold uppercase tracking-wider transition-all disabled:opacity-70 cursor-pointer"
+        className="w-[180px] mx-auto mt-2.5 py-3 px-6 rounded-full font-bold uppercase tracking-wider transition-all disabled:opacity-70 cursor-pointer bg-[#000000] text-white hover:bg-neutral-800 border border-white/20 shadow-md"
         style={{ 
-          padding: '12px 24px', 
-          width: '180px', 
-          margin: '10px auto 0',
-          borderRadius: '50px',
           fontSize: '14px',
           fontFamily: F_JOST
         }}>
@@ -272,29 +268,29 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', isTransp
         
         /* Dropdown List Styling */
         .react-tel-input .country-list {
-          background-color: ${isTransparent ? '#180C06' : '#ffffff'} !important;
-          border: 1px solid ${isTransparent ? 'rgba(184,138,68,0.4)' : '#e5e7eb'} !important;
+          background-color: ${isTransparent ? '#05070B' : '#ffffff'} !important;
+          border: 1px solid ${isTransparent ? 'rgba(255,255,255,0.2)' : '#e5e7eb'} !important;
           box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
         }
         .react-tel-input .country-list .country-name {
           color: ${isTransparent ? '#ffffff' : '#111111'} !important;
         }
         .react-tel-input .country-list .dial-code {
-          color: ${isTransparent ? '#B88A44' : '#6b7280'} !important;
+          color: ${isTransparent ? '#ffffff' : '#6b7280'} !important;
         }
         .react-tel-input .country-list .country:hover,
         .react-tel-input .country-list .country.highlight {
-          background-color: ${isTransparent ? 'rgba(184,138,68,0.2)' : '#f3f4f6'} !important;
+          background-color: ${isTransparent ? 'rgba(255,255,255,0.1)' : '#f3f4f6'} !important;
         }
         
         /* Search Box Styling */
         .react-tel-input .country-list .search {
-          background-color: ${isTransparent ? '#180C06' : '#ffffff'} !important;
+          background-color: ${isTransparent ? '#05070B' : '#ffffff'} !important;
         }
         .react-tel-input .country-list .search-box {
           background-color: ${isTransparent ? 'rgba(255,255,255,0.05)' : '#ffffff'} !important;
           color: ${isTransparent ? '#ffffff' : '#111111'} !important;
-          border: 1px solid ${isTransparent ? 'rgba(184,138,68,0.3)' : '#d1d5db'} !important;
+          border: 1px solid ${isTransparent ? 'rgba(255,255,255,0.2)' : '#d1d5db'} !important;
         }
         .react-tel-input .form-control {
           background-color: transparent !important;

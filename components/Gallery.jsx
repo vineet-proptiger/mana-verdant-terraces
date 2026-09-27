@@ -120,19 +120,19 @@ const Gallery = ({ setIsOpen }) => {
                 fontSize: '12px',
                 fontWeight: '700',
                 letterSpacing: '0.15em',
-                color: '#B88A44',
-                border: '1px solid #C5A059',
+                color: '#000000',
+                border: '1.5px solid #000000',
                 padding: '14px 36px',
                 background: 'transparent',
                 cursor: 'pointer',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = '#B88A44'
+                e.currentTarget.style.background = '#000000'
                 e.currentTarget.style.color = '#fff'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = 'transparent'
-                e.currentTarget.style.color = '#B88A44'
+                e.currentTarget.style.color = '#000000'
               }}
             >
               {showAll ? 'SHOW LESS' : 'VIEW ALL GALLERY'}

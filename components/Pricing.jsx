@@ -67,9 +67,9 @@ const Pricing = ({ setIsOpen }) => {
           
           {/* Decorative Line */}
           <div className="flex items-center justify-center mt-4 mb-3">
-            <div className="w-16 h-[1px] bg-[#B88A44]"></div>
-            <div className="w-2 h-2 rounded-full bg-[#B88A44] mx-3"></div>
-            <div className="w-16 h-[1px] bg-[#B88A44]"></div>
+            <div className="w-16 h-[1px] bg-[#000000]"></div>
+            <div className="w-2 h-2 rounded-full bg-[#000000] mx-3"></div>
+            <div className="w-16 h-[1px] bg-[#000000]"></div>
           </div>
         </div>
 
@@ -83,14 +83,14 @@ const Pricing = ({ setIsOpen }) => {
               data-aos-delay={idx * 150}
               className={`w-full max-w-[360px] bg-white rounded-t-[90px] rounded-b-3xl p-8 sm:p-9 flex flex-col items-center relative transition-all duration-400 hover:-translate-y-2 ${
                 unit.isPopular
-                  ? "border-2 border-[#B88A44] shadow-[0_20px_45px_rgba(65, 32, 17,0.12)] hover:shadow-[0_28px_55px_rgba(184, 138, 68,0.22)] ring-4 ring-[#B88A44]/15"
-                  : "border border-[#E8DEC8] shadow-[0_12px_32px_rgba(11, 30, 54,0.06)] hover:shadow-[0_20px_42px_rgba(11, 30, 54,0.12)]"
+                  ? "border-2 border-[#000000] shadow-[0_20px_45px_rgba(0,0,0,0.12)] hover:shadow-[0_28px_55px_rgba(0,0,0,0.2)] ring-4 ring-black/10"
+                  : "border border-gray-200 shadow-[0_12px_32px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_42px_rgba(0,0,0,0.12)]"
               }`}
             >
               {/* Popular Crown Tag */}
               {unit.crown && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#B88A44] via-[#946B2D] to-[#B88A44] text-white text-[10.5px] font-extrabold px-5 py-1.5 rounded-full whitespace-nowrap z-20 tracking-wider shadow-md flex items-center gap-1.5 uppercase ring-2 ring-white">
-                  <Sparkles size={11} className="text-yellow-300" />
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#000000] text-white text-[10.5px] font-extrabold px-5 py-1.5 rounded-full whitespace-nowrap z-20 tracking-wider shadow-md flex items-center gap-1.5 uppercase ring-2 ring-white">
+                  <Sparkles size={11} className="text-white" />
                   Most Preferred Choice
                 </div>
               )}
@@ -99,14 +99,14 @@ const Pricing = ({ setIsOpen }) => {
               <div
                 className={`w-36 h-40 rounded-t-full rounded-b-2xl border flex flex-col items-center justify-center p-4 mb-6 shadow-xs transition-colors ${
                   unit.isPopular
-                    ? "bg-gradient-to-b from-[#FDFBF7] via-[#ffffff] to-white border-[#E8DEC8]"
-                    : "bg-gradient-to-b from-[#FDFBF7] via-[#ffffff] to-white border-[#E8DEC8]"
+                    ? "bg-gradient-to-b from-[#F9FAFB] via-[#ffffff] to-white border-gray-200"
+                    : "bg-gradient-to-b from-[#F9FAFB] via-[#ffffff] to-white border-gray-200"
                 }`}
               >
                 {/* Icon */}
                 <div
                   className={`w-11 h-11 rounded-full flex items-center justify-center mb-2.5 bg-white shadow-xs border ${
-                    unit.isPopular ? "border-[#E8DEC8] text-[#412011]" : "border-[#E8DEC8] text-[#412011]"
+                    unit.isPopular ? "border-gray-300 text-[#000000]" : "border-gray-300 text-[#000000]"
                   }`}
                 >
                   <BedDouble size={20} strokeWidth={1.8} />
@@ -119,7 +119,7 @@ const Pricing = ({ setIsOpen }) => {
                   {unit.type}
                 </div>
 
-                <span className="text-[11px] text-center font-extrabold text-[#8A6327] uppercase tracking-widest mt-1">
+                <span className="text-[11px] text-center font-extrabold text-gray-600 uppercase tracking-widest mt-1">
                   {unit.subtitle}
                 </span>
               </div>
@@ -130,13 +130,13 @@ const Pricing = ({ setIsOpen }) => {
               </div> */}
 
               {/* Price Pedestal */}
-              <div className="text-center mb-7 w-full py-4 px-4 rounded-2xl bg-gradient-to-b from-[#f6f9fd] to-[#e8f2fc] border border-[#d8e8f8]">
-                <span className="text-[10.5px] font-bold uppercase tracking-widest text-[#B88A44] block mb-1">
+              <div className="text-center mb-7 w-full py-4 px-4 rounded-2xl bg-gradient-to-b from-gray-50 to-gray-100 border border-gray-200">
+                <span className="text-[10.5px] font-bold uppercase tracking-widest text-gray-600 block mb-1">
                   {unit.priceSub}
                 </span>
                 <div
                   className={`text-[29px] sm:text-[32px] font-extrabold leading-none ${
-                    unit.isPopular ? "text-[#412011]" : "text-[#412011]"
+                    unit.isPopular ? "text-[#000000]" : "text-[#000000]"
                   }`}
                   style={{ fontFamily: F_JOST }}
                 >
@@ -152,7 +152,7 @@ const Pricing = ({ setIsOpen }) => {
                     className="flex items-center gap-3 text-[13px] text-gray-700 font-medium"
                     style={{ fontFamily: F_SANS }}
                   >
-                    <div className="w-5 h-5 rounded-full bg-[#FAF3E8] flex items-center justify-center flex-shrink-0 text-[#412011] border border-[#E8DEC8]">
+                    <div className="w-5 h-5 rounded-full bg-black flex items-center justify-center flex-shrink-0 text-white">
                       <Check size={12} strokeWidth={3.5} />
                     </div>
                     <span>{feature}</span>
@@ -165,13 +165,12 @@ const Pricing = ({ setIsOpen }) => {
                 onClick={() => setIsOpen(true)}
                 className={`w-full py-3.5 px-6 rounded-full text-[12.5px] font-extrabold tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer flex items-center justify-center gap-2 ${
                   unit.isPopular
-                    ? "bg-gradient-to-r from-[#B88A44] to-[#946B2D] text-white hover:brightness-110 shadow-[#B88A44]/30"
-                    : "bg-white border-2 border-[#B88A44] text-[#412011] hover:bg-[#B88A44] hover:text-white"
+                    ? "bg-[#000000] text-white hover:bg-gray-800 shadow-black/20"
+                    : "bg-white border-2 border-[#000000] text-[#000000] hover:bg-[#000000] hover:text-white"
                 }`}
                 style={{ fontFamily: F_JOST }}
               >
                 <span>{unit.btnText}</span>
-                <ArrowRight size={15} />
               </button>
 
             </div>

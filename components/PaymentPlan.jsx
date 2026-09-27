@@ -39,10 +39,10 @@ const PaymentPlan = ({ setIsOpen }) => (
       <div style={{ marginBottom: '36px', textAlign: 'center' }} data-aos="fade-up">
         <span style={{
           display: 'inline-block', padding: '4px 16px',
-          background: 'var(--color-gold-bg)', borderRadius: '50px',
-          fontSize: '11px', fontWeight: '700', color: 'var(--color-gold)',
+          background: '#f3f4f6', borderRadius: '50px',
+          fontSize: '11px', fontWeight: '700', color: '#000000',
           fontFamily: F_JOST, letterSpacing: '0.1em', textTransform: 'uppercase',
-          border: '1px solid var(--color-gold-light)', marginBottom: '10px',
+          border: '1px solid #e5e7eb', marginBottom: '10px',
         }}>Payment Plan</span>
         <h2
           className="text-[22px] sm:text-[28px] md:text-[36px] font-semibold leading-tight uppercase tracking-wider text-gray-900"
@@ -50,7 +50,7 @@ const PaymentPlan = ({ setIsOpen }) => (
         >
           Easy <strong className="font-extrabold">Flexi</strong> Payment Plan
         </h2>
-        <div style={{ width: '60px', height: '3px', background: 'linear-gradient(90deg, var(--color-gold), var(--color-gold-light))', borderRadius: '2px', margin: '8px auto 0' }} />
+        <div style={{ width: '60px', height: '3px', background: '#000000', borderRadius: '2px', margin: '8px auto 0' }} />
       </div>
 
       {/* Table */}
@@ -90,12 +90,12 @@ const PaymentPlan = ({ setIsOpen }) => (
             <p style={{
               fontFamily: F_SANS,
               fontSize: '13px',
-              color: 'var(--color-gold-dark, #8A6E28)',
+              color: '#000000',
               margin: 0,
               flex: '1 1 220px',
               textAlign: 'right',
               lineHeight: 1.55,
-              fontWeight: '600',
+              fontWeight: '700',
             }}>
               {row.value}
             </p>

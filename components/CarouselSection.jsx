@@ -114,9 +114,9 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
         scrollMarginTop: '80px',
         padding: '56px 0 84px 0',
         background: id === 'amenities' 
-          ? 'linear-gradient(180deg, #1C0E07 0%, #2A160C 50%, #150904 100%)' 
+          ? 'linear-gradient(180deg, #0A0A0A 0%, #000000 50%, #000000 100%)' 
           : '#FDFBF7',
-        color: id === 'amenities' ? '#ffffff' : '#2A160C',
+        color: id === 'amenities' ? '#ffffff' : '#000000',
         fontFamily: '"Montserrat", var(--font-montserrat), sans-serif',
         fontSize: '15px',
         lineHeight: '150%',
@@ -128,14 +128,14 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
       {/* ── Ambient Luxury Deep Glow (Amenities only) ── */}
       {id === 'amenities' && (
         <>
-          {/* Top-Right Soft Warm Gold Orb */}
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#B88A44]/20 blur-[120px] pointer-events-none" />
+          {/* Top-Right Soft Orb */}
+          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-white/5 blur-[120px] pointer-events-none" />
           
-          {/* Bottom-Left Soft Cocoa Glow Orb */}
-          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#412011]/35 blur-[120px] pointer-events-none" />
+          {/* Bottom-Left Soft Glow Orb */}
+          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#0A0A0A]/35 blur-[120px] pointer-events-none" />
 
-          {/* Center Subtle Deep Warm Gold Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[380px] rounded-full bg-[#B88A44]/15 blur-[100px] pointer-events-none" />
+          {/* Center Subtle Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[380px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
         </>
       )}
       <style dangerouslySetInnerHTML={{ __html: `
@@ -204,9 +204,9 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
           </h2>
           {/* Decorative Line */}
           <div className="flex items-center justify-center mt-4 mb-3">
-            <div className="w-16 h-[1.5px] bg-[#B88A44]"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-[#B88A44] mx-3 ring-4 ring-[#B88A44]/25"></div>
-            <div className="w-16 h-[1.5px] bg-[#B88A44]"></div>
+            <div className={`w-16 h-[1.5px] ${id === 'amenities' ? 'bg-white' : 'bg-[#000000]'}`}></div>
+            <div className={`w-2.5 h-2.5 rounded-full ${id === 'amenities' ? 'bg-white ring-white/25' : 'bg-[#000000] ring-black/15'} mx-3 ring-4`}></div>
+            <div className={`w-16 h-[1.5px] ${id === 'amenities' ? 'bg-white' : 'bg-[#000000]'}`}></div>
           </div>
         </div>
 
@@ -381,7 +381,7 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
                     key={idx} 
                     className={`relative flex-shrink-0 group overflow-hidden cursor-pointer ${
                       id === 'amenities'
-                        ? 'rounded-2xl border border-[#B88A44]/40 shadow-[0_20px_45px_rgba(0,0,0,0.65)] bg-[#2A160C]'
+                        ? 'rounded-2xl border border-white/20 shadow-[0_20px_45px_rgba(0,0,0,0.65)] bg-[#000000]'
                         : 'bg-gray-200'
                     }`}
                     style={{ width: 'var(--slide-w)', aspectRatio: '16/9' }}
@@ -443,7 +443,7 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
                 onClick={prevSlide} 
                 className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${
                   id === 'amenities'
-                    ? 'border border-white/30 text-white hover:bg-[#B88A44] hover:border-[#B88A44]'
+                    ? 'border border-white/30 text-white hover:bg-white hover:text-black hover:border-white'
                     : 'border border-gray-400 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -456,7 +456,7 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
                 onClick={nextSlide} 
                 className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${
                   id === 'amenities'
-                    ? 'border border-white/30 text-white hover:bg-[#B88A44] hover:border-[#B88A44]'
+                    ? 'border border-white/30 text-white hover:bg-white hover:text-black hover:border-white'
                     : 'border border-gray-400 text-gray-600 hover:bg-gray-200'
                 }`}
               >

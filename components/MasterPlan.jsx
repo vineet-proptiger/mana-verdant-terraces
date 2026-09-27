@@ -34,22 +34,22 @@ const MasterPlan = ({ setIsOpen }) => {
           </h2>
           {/* Decorative Line */}
           <div className="flex items-center justify-center mt-2 mb-8">
-            <div className="w-16 h-[1px] bg-[#B88A44]"></div>
-            <div className="w-2 h-2 rounded-full bg-[#B88A44] mx-3"></div>
-            <div className="w-16 h-[1px] bg-[#B88A44]"></div>
+            <div className="w-16 h-[1px] bg-[#000000]"></div>
+            <div className="w-2 h-2 rounded-full bg-[#000000] mx-3"></div>
+            <div className="w-16 h-[1px] bg-[#000000]"></div>
           </div>
 
           {/* Tabs */}
           <div className="flex justify-center items-center">
             <button 
               onClick={() => setActiveTab('master')}
-              className={`px-8 py-3 text-[17px] font-medium transition-all cursor-pointer border border-[#B88A44] ${activeTab === 'master' ? 'bg-[#B88A44] text-white' : 'bg-transparent text-[#412011]'}`}
+              className={`px-8 py-3 text-[17px] font-medium transition-all cursor-pointer border border-[#000000] ${activeTab === 'master' ? 'bg-[#000000] text-white' : 'bg-transparent text-[#000000]'}`}
             >
               Master Plan
             </button>
             <button 
               onClick={() => setActiveTab('floor')}
-              className={`px-8 py-3 text-[17px] font-medium transition-all cursor-pointer border border-l-0 border-[#B88A44] ${activeTab === 'floor' ? 'bg-[#B88A44] text-white' : 'bg-transparent text-[#412011]'}`}
+              className={`px-8 py-3 text-[17px] font-medium transition-all cursor-pointer border border-l-0 border-[#000000] ${activeTab === 'floor' ? 'bg-[#000000] text-white' : 'bg-transparent text-[#000000]'}`}
             >
               Floor Plan
             </button>
@@ -60,14 +60,14 @@ const MasterPlan = ({ setIsOpen }) => {
         <div className="max-w-[1100px] mx-auto">
           {activeTab === 'master' && (
             <div className="w-full max-w-[820px] mx-auto bg-white rounded-md overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.1)] p-4" data-aos="zoom-in" data-aos-duration="1000">
-              <a onClick={() => setIsOpen && setIsOpen(true)} className="cursor-pointer block relative overflow-hidden group bg-[#fdfbf7]">
+              <a onClick={() => setIsOpen && setIsOpen(true)} className="cursor-pointer block relative overflow-hidden group bg-gray-50">
                 <img 
                   src={masterplanImages.masterPlan} 
                   alt="Master Plan" 
                   className="w-full h-auto mx-auto filter blur-[6px] group-hover:blur-[3px] transition-all duration-300" 
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-white/20">
-                  <span className="bg-[#B88A44] group-hover:bg-[#B88A44] text-white px-7 py-4 text-[14px] sm:text-[15px] leading-snug font-semibold uppercase tracking-wider text-center shadow-md transition-colors duration-300">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/25">
+                  <span className="bg-[#000000] group-hover:bg-[#1f2937] text-white px-7 py-4 text-[14px] sm:text-[15px] leading-snug font-semibold uppercase tracking-wider text-center shadow-lg border border-white/30 transition-colors duration-300">
                     Download<br/>Master Plan
                   </span>
                 </div>
@@ -79,21 +79,21 @@ const MasterPlan = ({ setIsOpen }) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
               {plans.map((plan, idx) => (
                 <div key={idx} className="bg-white rounded-md overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={idx * 100}>
-                  <a onClick={() => setIsOpen && setIsOpen(true)} className="cursor-pointer block relative h-[260px] overflow-hidden group bg-[#fdfbf7] flex items-center justify-center p-4">
+                  <a onClick={() => setIsOpen && setIsOpen(true)} className="cursor-pointer block relative h-[260px] overflow-hidden group bg-gray-50 flex items-center justify-center p-4">
                     <img 
                       src={plan.img} 
                       alt={plan.label} 
                       className="w-full h-full object-contain filter blur-[6px] group-hover:blur-[3px] transition-all duration-300" 
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-white/20">
-                      <span className="bg-[#B88A44] group-hover:bg-[#B88A44] text-white px-5 py-3 text-[13px] leading-snug font-semibold uppercase tracking-wider text-center transition-colors duration-300">
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/25">
+                      <span className="bg-[#000000] group-hover:bg-[#1f2937] text-white px-5 py-3 text-[13px] leading-snug font-semibold uppercase tracking-wider text-center shadow-lg border border-white/30 transition-colors duration-300">
                         Download<br/>Floor Plans
                       </span>
                     </div>
                   </a>
                   <div className="p-6 text-center border-t border-gray-100 bg-white">
-                    <h4 className="text-[22px] text-[#412011] font-semibold mb-4">{plan.label}</h4>
-                    {/* <p className="text-[15px] text-gray-600"><span className="font-semibold text-gray-800">Saleable Area </span><br/><span className="text-[17px] font-bold text-[#412011] inline-block mt-1">{plan.details.saleableArea}</span></p> */}
+                    <h4 className="text-[22px] text-[#0A0A0A] font-semibold mb-4">{plan.label}</h4>
+                    {/* <p className="text-[15px] text-gray-600"><span className="font-semibold text-gray-800">Saleable Area </span><br/><span className="text-[17px] font-bold text-[#0A0A0A] inline-block mt-1">{plan.details.saleableArea}</span></p> */}
                   </div>
                 </div>
               ))}

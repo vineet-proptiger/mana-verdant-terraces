@@ -46,7 +46,7 @@ const Highlights = ({ setIsOpen }) => {
       style={{ backgroundImage: "url('/images/highlights/highlight.webp')" }}
     >
       {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-[#180C06]/75 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#05070B]/75 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 max-w-[1200px] relative z-10">
         <h2 
@@ -60,9 +60,9 @@ const Highlights = ({ setIsOpen }) => {
 
         {/* Decorative Line */}
         <div className="flex items-center justify-center mt-3 mb-10" data-aos="fade-up" data-aos-duration="1000">
-          <div className="w-16 h-[1.5px] bg-[#B88A44]"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-[#B88A44] mx-3 ring-4 ring-[#B88A44]/25"></div>
-          <div className="w-16 h-[1.5px] bg-[#B88A44]"></div>
+          <div className="w-16 h-[1.5px] bg-[#000000]"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-[#000000] mx-3 ring-4 ring-black/15"></div>
+          <div className="w-16 h-[1.5px] bg-[#000000]"></div>
         </div>
         
         {/* 5 Highlights Cards */}
@@ -75,16 +75,16 @@ const Highlights = ({ setIsOpen }) => {
                 data-aos="fade-up"
                 data-aos-duration="800"
                 data-aos-delay={idx * 100}
-                className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group p-7 rounded-2xl bg-white/95 backdrop-blur-sm border border-[#E8DEC8] shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:shadow-[0_16px_36px_rgba(65,32,17,0.22)] hover:border-[#B88A44] transform transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center cursor-default"
+                className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group p-7 rounded-2xl bg-white/95 backdrop-blur-sm border border-gray-200 shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.15)] hover:border-black transform transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center cursor-default"
               >
                 {/* Modern Icon Badge */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#FAF3E8] to-[#F5EADB] border border-[#E8DEC8] flex items-center justify-center text-[#B88A44] mb-5 shadow-xs group-hover:scale-110 group-hover:bg-[#412011] group-hover:text-[#B88A44] group-hover:border-[#B88A44] transition-all duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 border border-gray-200 flex items-center justify-center text-[#000000] mb-5 shadow-xs group-hover:scale-110 group-hover:bg-[#000000] group-hover:text-white group-hover:border-black transition-all duration-300">
                   <IconComponent size={30} strokeWidth={1.9} />
                 </div>
 
                 {/* Title */}
                 <h3 
-                  className="text-[18px] sm:text-[19px] font-bold mb-2.5 text-[#412011] tracking-tight group-hover:text-[#B88A44] transition-colors duration-300" 
+                  className="text-[18px] sm:text-[19px] font-bold mb-2.5 text-[#0A0A0A] tracking-tight group-hover:text-black transition-colors duration-300" 
                   style={{ fontFamily: F_JOST }}
                 >
                   {item.title}

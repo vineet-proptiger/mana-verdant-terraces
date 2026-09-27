@@ -42,9 +42,9 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
       <div
         className="relative w-full max-w-[92vw] sm:w-[440px] h-auto rounded-3xl flex flex-col justify-center items-center p-8 mx-auto"
         style={{
-          background: 'radial-gradient(135% 135% at 50% 20%, #412011 0%, #2A160C 60%, #180C06 100%)',
-          border: '2px solid #B88A44',
-          boxShadow: '0 0 50px rgba(184, 138, 68, 0.45), 0 20px 45px rgba(0, 0, 0, 0.8)',
+          background: 'radial-gradient(135% 135% at 50% 20%, #111827 0%, #000000 60%, #05070B 100%)',
+          border: '1px solid rgba(255, 255, 255, 0.25)',
+          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 255, 255, 0.06)',
           animation: 'slideInRight 0.45s cubic-bezier(0.22,1,0.36,1) forwards',
         }}
         onClick={(e) => e.stopPropagation()}
@@ -53,13 +53,13 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
           <div className="text-center mb-5 flex flex-col items-center">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 z-20 text-[#412011] hover:text-[#B88A44] hover:scale-110 transition-all flex items-center justify-center shadow-lg"
+              className="absolute top-4 right-4 z-20 text-white hover:text-gray-300 hover:scale-110 transition-all flex items-center justify-center shadow-lg cursor-pointer"
               style={{ 
                 width: '30px', 
                 height: '30px', 
                 borderRadius: '50%', 
-                background: '#ffffff',
-                border: '1px solid rgba(184, 138, 68, 0.6)'
+                background: '#1F2937',
+                border: '1px solid rgba(255, 255, 255, 0.3)'
               }}
               aria-label="Close"
             >
@@ -68,7 +68,7 @@ const EnquireModal = ({ isOpen, setIsOpen }) => {
             <h3 className="text-xl sm:text-2xl font-bold tracking-wider mb-2 uppercase text-white" style={{ fontFamily: F_JOST }}>
               Enquire Now
             </h3>
-            <div className="w-10 h-[2px] bg-[#B88A44] rounded-full mx-auto mb-2"></div>
+            <div className="w-10 h-[2px] bg-white rounded-full mx-auto mb-2"></div>
             <p className="text-white/80 text-[13px]" style={{ fontFamily: F_SANS }}>
               Please enter your details to know more
             </p>
