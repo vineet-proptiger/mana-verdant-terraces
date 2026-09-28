@@ -3,7 +3,8 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: ['/api/'],
     },
-    sitemap: 'https://manaverdantterraces.com/sitemap.xml',
+    sitemap: 'https://managroupprojects.com/sitemap.xml',
   }
 }
