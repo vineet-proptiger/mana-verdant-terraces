@@ -1,8 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { logoImages } from '../../lib/images'
-import AosInit from '../../components/AosInit'
+import { logoImages } from '../../../lib/mana-right-life/images'
+import AosInit from '../../../components/mana-right-life/AosInit'
 
 const GOLD = 'var(--color-gold)'
 const GOLD_DARK = 'var(--color-gold-dark)'
