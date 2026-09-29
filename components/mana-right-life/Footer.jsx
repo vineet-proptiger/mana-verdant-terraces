@@ -36,7 +36,7 @@ const Footer = () => (
         &copy; 2026Mana The Right Life. All rights reserved.
       </p>
       <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-        <Link href="/privacy-policy" style={{ fontSize: '13px', color: 'var(--color-gold)', fontFamily: F_SANS }}>
+        <Link href="/mana-right-life/privacy-policy" style={{ fontSize: '13px', color: 'var(--color-gold)', fontFamily: F_SANS }}>
           Privacy Policy
         </Link>
       </div>

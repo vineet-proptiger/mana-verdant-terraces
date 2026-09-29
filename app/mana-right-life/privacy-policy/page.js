@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
         <div className="h-0.5 w-full" style={{ background: `linear-gradient(90deg, var(--color-gold), var(--color-gold-light), var(--color-gold))` }}></div>
 
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
-          <Link href="/" className="flex items-center">
+          <Link href="/mana-right-life" className="flex items-center">
             <style>{`
               .privacy-logo { height: 54px; width: auto; display: block; object-fit: contain; transform: scale(1.3, 1.15); transform-origin: left center; }
               @media(max-width: 768px) {
@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             <img src={logoImages.main} alt="Mana Skanda The Right Life Logo" className="privacy-logo" />
           </Link>
           <Link
-            href="/"
+            href="/mana-right-life"
             className="btn-gold shadow-lg !text-[11px] !px-3 !py-2 sm:!text-sm sm:!px-6 sm:!py-3"
           >
             <span className="hidden sm:inline">BACK TO HOME</span><span className="sm:hidden">HOME</span>
@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
       <section
         className="relative flex items-center justify-center text-center min-h-[140px] sm:min-h-[200px]"
         style={{
-          backgroundImage: 'url(/images/hero/banner.webp)',
+          backgroundImage: 'url(/mana-right-life/hero/banner1.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <div className="flex items-center justify-center gap-2 text-white/80 text-sm" style={{ fontFamily: 'var(--font-sans)' }}>
-            <Link href="/" className="hover:text-white transition-colors" style={{ color: 'var(--color-gold)' }}>Home</Link>
+            <Link href="/mana-right-life" className="hover:text-white transition-colors" style={{ color: 'var(--color-gold)' }}>Home</Link>
             <span>›</span>
             <span>Privacy Policy</span>
           </div>
@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
             <p className="mb-6 sm:mb-8 text-sm sm:text-base" style={{ lineHeight: 1.8, color: '#444', fontFamily: 'var(--font-jost), Jost, sans-serif' }}>
               At{' '}
               <Link
-                href="/"
+                href="/mana-right-life"
                 style={{ color: 'var(--color-gold-dark)', fontWeight: '600' }}
               >
                 manaskandatherightlife.co.in
@@ -310,7 +310,7 @@ export default function PrivacyPolicy() {
       <footer style={{ background: 'var(--color-dark)', color: '#fff', padding: '24px', textAlign: 'center', borderTop: '1px solid #333' }}>
         <p style={{ fontSize: '13px', color: '#888', fontFamily: 'var(--font-sans)' }}>
           &copy; 2026 Mana The Right Life. All rights reserved |{' '}
-          <Link href="/" style={{ color: 'var(--color-gold)', textDecoration: 'none' }}>Back to Home</Link>
+          <Link href="/mana-right-life" style={{ color: 'var(--color-gold)', textDecoration: 'none' }}>Back to Home</Link>
         </p>
       </footer>
     </main>
