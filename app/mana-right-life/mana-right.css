@@ -2,68 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  button,
-  [type='button'],
-  [type='reset'],
-  [type='submit'] {
-    cursor: pointer !important;
-  }
-}
-
 @import 'aos/dist/aos.css';
 
 /* ═══════════════════════════════════════════════════════════════
-   THEME VARIABLES — Mana Verdant Terraces Near ORR Exit 2, Radial Rd. 7 Theme
+   THEME VARIABLES — Lodha (Golden Amber & Charcoal Theme)
    ═══════════════════════════════════════════════════════════════ */
 :root {
-  /* ── Brand Cocoa & Warm Gold Theme ── */
-  --color-gold: #000000;        
-  --color-gold-light: #1F2937;
-  --color-gold-dark: #000000;
-  --color-gold-bg: rgba(0, 0, 0, 0.08);     
+  /* ── Brand Gold Theme ── */
+  --color-gold: #C9A96E;        
+  --color-gold-light: #d8be8d;
+  --color-gold-dark: #b89552;
+  --color-gold-bg: rgba(201, 169, 110, 0.1);     
 
-  /* ── Brand Primary (Deep Nature Green) ── */
-  --color-brand: #000000;
-  --color-brand-hover: #1F2937;
-  --color-brand-light: rgba(0, 0, 0, 0.1);
+  /* ── Brand Primary ── */
+  --color-brand: #C9A96E;
+  --color-brand-hover: #b89552;
+  --color-brand-light: rgba(201, 169, 110, 0.08);
 
-  /* ── Text (nav links, headings) ── */
-  --color-nav-text: #0A0A0A;
-  --color-heading-brown: #0A0A0A;
+  /* ── Brown Text (nav links, headings) ── */
+  --color-nav-text: #684C1B;
+  --color-heading-brown: #3A2A0E;
 
   /* ── Section Backgrounds ── */
-  --color-cream-bg: #FFFFFF;
-  --color-border-gold: #000000;
+  --color-cream-bg: #EAE5DC;
+  --color-border-gold: #D5C2A8;
 
   /* ── Charcoal Gray Primary Palette ── */
-  --color-primary: #0A0A0A;
-  --color-primary-light: #1F2937;
-  --color-primary-dark: #000000;
+  --color-primary: #6D6E70;
+  --color-primary-light: #8A8B8D;
+  --color-primary-dark: #555658;
 
-  --color-dark: #000000;
-  --color-dark-mid: #0A0A0A;
+  --color-dark: #3A3B3C;
+  --color-dark-mid: #4A4B4D;
 
   /* ── Background Palette ── */
   --color-bg: #ffffff;
   --color-bg-light: #ffffff;
-  --color-bg-muted: #F9FAFB;
+  --color-bg-muted: #f7f7f7;
 
   /* ── Text Palette ── */
-  --color-text: #000000;
-  --color-text-mid: #333333;
-  --color-text-light: #666666;
+  --color-text: #3A3B3C;
+  --color-text-mid: #6D6E70;
+  --color-text-light: #9A9B9D;
 
   /* ── UI ── */
   --btn-radius: 6px;
   --btn-radius-pill: 50px;
 
   /* ── Shadows ── */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.10);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.16);
-  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.20);
+  --shadow-sm: 0 2px 8px rgba(201, 169, 110, 0.08);
+  --shadow-md: 0 8px 24px rgba(201, 169, 110, 0.14);
+  --shadow-lg: 0 20px 48px rgba(201, 169, 110, 0.18);
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.07);
-  --color-shadow-inner: rgba(0, 0, 0, 0.10);
+  --color-shadow-inner: rgba(201, 169, 110, 0.10);
 }
 
 /* ─── Keyframes ─────────────────────────────────────────────── */
@@ -110,11 +101,11 @@
 
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.5);
   }
 
   50% {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 10px rgba(201, 169, 110, 0);
   }
 }
 
@@ -144,12 +135,32 @@
 
   0%,
   100% {
-    border-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(201, 169, 110, 0.4);
   }
 
   50% {
-    border-color: rgba(0, 0, 0, 1);
+    border-color: rgba(201, 169, 110, 1);
   }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes error {
+  0% { border: 2px solid #000; }
+  100% { border: 2px solid var(--color-gold); }
+}
+
+.textclip-animate {
+  background-image: linear-gradient(-225deg, var(--color-gold) 0, var(--color-gold-dark) 29%, #000 67%, var(--color-gold) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 2s linear infinite textclip;
 }
 
 /* ─── Utility classes ────────────────────────────────────────── */
@@ -173,59 +184,6 @@
   font-weight: 700;
 }
 
-/* ─── Slick Carousel – Production Build Defensive Rules ──────── */
-/* Prevents zero-width/height track collapse when CSS loads after mount */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-}
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.slick-track {
-  position: relative;
-  display: flex !important;
-  top: 0;
-  left: 0;
-}
-.slick-slide {
-  display: block;
-  float: left;
-  height: auto;
-  min-height: 1px;
-}
-.slick-slide > div {
-  width: 100%;
-}
-
-/* Ensure amenities images always render on mobile in production */
-@media (max-width: 767px) {
-  .amenities-slider .slick-track {
-    display: flex !important;
-  }
-  .amenities-slider .slick-slide {
-    width: 100% !important;
-    opacity: 1;
-  }
-  .amenities-slider .slick-slide .amenities-box {
-    transform: scale(1) !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    aspect-ratio: 16/9;
-  }
-  .amenities-slider .slick-slide .amenities-box img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-}
-
 /* ─── Base ───────────────────────────────────────────────────── */
 @layer base {
 
@@ -237,11 +195,6 @@
 
   html {
     overflow-x: hidden;
-  }
-
-  /* Prevent fixed navbar from hiding section top content on scroll jumping */
-  section, [id] {
-    scroll-margin-top: 90px !important;
   }
 
   body {
@@ -264,7 +217,6 @@
     font-family: var(--font-jost), 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: #0A0A0A;
   }
 
   img {
@@ -301,8 +253,8 @@
 
   /* ── Theme selection ── */
   ::selection {
-    background: rgba(0, 0, 0, 0.15);
-    color: #0A0A0A;
+    background: rgba(201, 169, 110, 0.15);
+    color: var(--color-gold-dark);
   }
 }
 
@@ -328,7 +280,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -355,12 +307,12 @@
     color: var(--color-gold) !important;
     border-color: var(--color-gold);
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.30);
   }
 
   .btn-gold:active {
     transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 4px 10px rgba(201, 169, 110, 0.20);
   }
 
   /* ══ OUTLINED RED BUTTON ══ */
@@ -390,7 +342,7 @@
     background: var(--color-gold) !important;
     color: #ffffff !important;
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.30);
   }
 
   /* ══ DARK PRIMARY BUTTON (Now Gold Theme) ══ */
@@ -412,7 +364,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -422,15 +374,15 @@
     color: var(--color-gold) !important;
     border-color: var(--color-gold);
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.30);
   }
 
   .btn-primary:active {
     transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 4px 10px rgba(201, 169, 110, 0.20);
   }
 
-  /* ══ BRAND BUTTON (Luxury Villas style) ══ */
+  /* ══ BRAND RED BUTTON (Krisumi style) ══ */
   .btn-brand {
     background: var(--color-brand);
     color: #fff;
@@ -472,7 +424,7 @@
     letter-spacing: 0.12em;
     font-weight: 700;
     box-shadow: none !important;
-    filter: drop-shadow(-4px 0 14px rgba(0, 0, 0, 0.28));
+    filter: drop-shadow(-4px 0 14px rgba(201, 169, 110, 0.28));
     border: 2px solid var(--color-brand) !important;
     transition: all 0.3s ease !important;
   }
@@ -481,66 +433,21 @@
     transform: translateY(-50%) rotate(0deg) !important;
     background: #ffffff !important;
     color: var(--color-brand) !important;
-    filter: drop-shadow(-6px 0 20px rgba(197, 154, 63, 0.35));
+    filter: drop-shadow(-6px 0 20px rgba(201, 169, 110, 0.35));
   }
 
-  /* ══ GLOBAL BUTTON & INTERACTIVE CURSOR POINTER ══ */
-  button,
-  [role="button"],
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"],
-  .btn,
-  .btn-gold,
-  .btn-gold-outline,
-  .btn-primary,
-  .btn-brand,
-  .theme_btn1 {
-    cursor: pointer !important;
+  /* ══ GLOBAL BUTTON OVERRIDE (Gold Gradient) ══ */
+  .btn-gold, .btn-gold-outline, .btn-primary, .btn-brand {
+    background: linear-gradient(90deg, #D4AF37 0%, #F9E08A 100%) !important;
+    color: #111827 !important;
+    border-color: transparent !important;
+    font-weight: 800 !important;
   }
 
-  button:hover,
-  [role="button"]:hover,
-  input[type="button"]:hover,
-  input[type="submit"]:hover,
-  .btn:hover,
-  .btn-gold:hover,
-  .btn-gold-outline:hover,
-  .btn-primary:hover,
-  .btn-brand:hover,
-  .theme_btn1:hover {
-    cursor: pointer !important;
-  }
-
-  /* ══ GLOBAL BUTTON OVERRIDE (Cocoa & Warm Gold) ══ */
-  .btn-gold, .btn-primary, .btn-brand {
-    background: #000000 !important;
-    color: #ffffff !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-    font-weight: 700 !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
-  }
-
-  .btn-gold:hover, .btn-primary:hover, .btn-brand:hover {
-    background: #1F2937 !important;
-    color: #ffffff !important;
-    border-color: rgba(255, 255, 255, 0.6) !important;
-    cursor: pointer !important;
-  }
-
-  .btn-gold-outline {
-    background: transparent !important;
-    color: #000000 !important;
-    border: 1.5px solid #000000 !important;
-    font-weight: 700 !important;
-    cursor: pointer !important;
-  }
-
-  .btn-gold-outline:hover {
-    background: #000000 !important;
-    color: #ffffff !important;
+  .btn-gold:hover, .btn-gold-outline:hover, .btn-primary:hover, .btn-brand:hover {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #D4AF37 !important;
   }
 
   /* ══ SECTION TITLE ══ */
@@ -579,7 +486,7 @@
 
   .form-input:focus {
     border-color: var(--color-gold);
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.10), inset 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.10), inset 0 1px 3px rgba(0, 0, 0, 0.04);
   }
 
   .form-input::placeholder {
@@ -634,7 +541,7 @@
   .pricing-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(0, 0, 0, 0.25);
+    border-color: rgba(201, 169, 110, 0.25);
   }
 
   .pricing-card:hover::after {
@@ -657,7 +564,7 @@
 
   .highlight-card:hover {
     border-color: var(--color-gold);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 28px rgba(201, 169, 110, 0.15);
     transform: translateY(-4px);
   }
 
@@ -679,7 +586,7 @@
     border-color: var(--color-gold);
     background: var(--color-gold-bg);
     color: var(--color-gold);
-    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 6px rgba(201, 169, 110, 0.08);
   }
 
   /* ══ SECTION WRAPPER — white card on diamond bg ══ */
@@ -709,18 +616,15 @@
     mask-repeat: no-repeat;
   }
 
-  /* Convert box-shadow to filter drop-shadow because mask clips box-shadow */
+  /* Remove box-shadow because mask clips it. Avoid drop-shadow due to iOS Safari rendering bug. */
   .btn-gold, .btn-primary {
     box-shadow: none !important;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
   }
   .btn-gold:hover, .btn-primary:hover, .btn-gold-outline:hover {
     box-shadow: none !important;
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.30));
   }
   .btn-gold:active, .btn-primary:active {
     box-shadow: none !important;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.20));
   }
 }
 
@@ -745,7 +649,7 @@
   right: 0;
   z-index: 999;
   display: flex;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 -4px 20px rgba(201, 169, 110, 0.18);
 }
 
 @media (min-width: 1024px) {
@@ -759,28 +663,32 @@ nav.fixed {
   background: rgba(255, 255, 255, 0.96) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.08);
 }
 
 /* ─── Teal-Cyan focus ring globally ─────────────────────────────────── */
 *:focus-visible {
-  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline: 2px solid rgba(201, 169, 110, 0.5);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* ─── Call Icon Animation ───────────────────────────────────── */
-@keyframes ring {
-  0% { transform: rotate(0); }
-  10% { transform: rotate(15deg); }
-  20% { transform: rotate(-10deg); }
-  30% { transform: rotate(15deg); }
-  40% { transform: rotate(-10deg); }
-  50% { transform: rotate(0); }
-  100% { transform: rotate(0); }
+/* ─── Phone Ring Animation ───────────────────────────────────── */
+@keyframes phone-ring {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  5% { transform: rotate(-12deg) scale(1.15); }
+  10% { transform: rotate(14deg) scale(1.15); }
+  15% { transform: rotate(-14deg) scale(1.15); }
+  20% { transform: rotate(12deg) scale(1.15); }
+  25% { transform: rotate(-10deg) scale(1.15); }
+  30% { transform: rotate(10deg) scale(1.15); }
+  35% { transform: rotate(-6deg) scale(1.1); }
+  40% { transform: rotate(6deg) scale(1.1); }
+  45% { transform: rotate(0deg) scale(1); }
 }
 
-.animate-ring {
-  animation: ring 2.5s ease-in-out infinite;
+.animate-phone-ring {
+  animation: phone-ring 2.5s infinite ease-in-out;
   transform-origin: center;
+  display: inline-block;
 }

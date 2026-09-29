@@ -43,20 +43,13 @@ const nephilm = localFont({
 
 export const metadata = {
   metadataBase: new URL('https://managroupprojects.com'),
-  title: 'Mana Verdant Terraces | Luxury 3 & 4 BHK Flats in Bengaluru',
-  description: 'Discover Mana Verdant Terraces on Sarjapur ORR Tech Corridor, Bengaluru. Premium 3 & 4 BHK stepped terrace residences starting at ₹2.5 Cr with 80+ world-class amenities.',
+  title: 'Mana Group Projects | Premium Real Estate',
+  description: 'Explore the latest premium projects by Mana Group. Find your dream home today.',
   keywords: [
-    'Mana Verdant Terraces',
     'Mana Group Projects',
     'Mana Projects Bengaluru',
-    'Mana Verdant Terraces Sarjapur',
-    '3 BHK Apartments Sarjapur Road',
-    '4 BHK Apartments Sarjapur Road',
     'Luxury Flats in Bengaluru',
-    'Mana Verdant Terraces Floor Plan',
-    'Mana Verdant Terraces Price',
-    'Mana Verdant Terraces Location',
-    'Apartments on Sarjapur ORR',
+    'Premium Real Estate',
   ],
   authors: [{ name: 'Mana Group Projects' }],
   creator: 'Mana Group Projects',
@@ -76,16 +69,16 @@ export const metadata = {
     canonical: 'https://managroupprojects.com/',
   },
   openGraph: {
-    title: 'Mana Verdant Terraces | Luxury 3 & 4 BHK Flats in Bengaluru',
-    description: 'Discover Mana Verdant Terraces on Sarjapur ORR Tech Corridor, Bengaluru. Premium 3 & 4 BHK luxury residences starting at ₹2.5 Cr with world-class amenities.',
+    title: 'Mana Group Projects | Premium Real Estate',
+    description: 'Explore the latest premium projects by Mana Group. Find your dream home today.',
     url: 'https://managroupprojects.com/',
-    siteName: 'Mana Group Projects - Mana Verdant Terraces',
+    siteName: 'Mana Group Projects',
     images: [
       {
-        url: '/images/hero/banner.webp',
+        url: '/images/home/hero-banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mana Verdant Terraces Bengaluru',
+        alt: 'Mana Group Projects',
       },
     ],
     locale: 'en_IN',
@@ -93,9 +86,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mana Verdant Terraces | Luxury 3 & 4 BHK Flats in Bengaluru',
-    description: 'Discover Mana Verdant Terraces on Sarjapur ORR Tech Corridor, Bengaluru. Premium 3 & 4 BHK luxury residences starting at ₹2.5 Cr with world-class amenities.',
-    images: ['/images/hero/banner.webp'],
+    title: 'Mana Group Projects | Premium Real Estate',
+    description: 'Explore the latest premium projects by Mana Group. Find your dream home today.',
+    images: ['/images/home/hero-banner.jpg'],
   },
   icons: {
     icon: '/images/favicon/fav.webp',
@@ -121,45 +114,14 @@ export default function RootLayout({ children }) {
                 {
                   "@type": "RealEstateAgent",
                   "@id": "https://managroupprojects.com/#agent",
-                  "name": "Mana Verdant Terraces",
+                  "name": "Mana Group Projects",
                   "url": "https://managroupprojects.com/",
                   "logo": "https://managroupprojects.com/images/logo/Logo.webp",
-                  "image": "https://managroupprojects.com/images/hero/banner.webp",
-                  "description": "Mana Verdant Terraces, Bengaluru's premium residential development in Sarjapur ORR Tech Corridor offering 3 & 4 BHK luxury residences.",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Sarjapur ORR Tech Corridor, Doddakanahalli, Varthur Hobli",
-                    "addressLocality": "Bengaluru",
-                    "addressRegion": "Karnataka",
-                    "postalCode": "560035",
-                    "addressCountry": "IN"
-                  },
+                  "image": "https://managroupprojects.com/images/home/hero-banner.jpg",
+                  "description": "Premium real estate projects by Mana Group.",
                   "telephone": "+919718344024",
-                  "priceRange": "₹ 2.5 Crore Onwards",
                   "sameAs": [
                     "https://managroupprojects.com/"
-                  ]
-                },
-                {
-                  "@type": "ApartmentComplex",
-                  "@id": "https://managroupprojects.com/#complex",
-                  "name": "Mana Verdant Terraces",
-                  "description": "Stepped terrace residences across four green spires on 8.67 acres in Doddakanahalli, Sarjapur ORR Tech Corridor, Bengaluru.",
-                  "url": "https://managroupprojects.com/",
-                  "telephone": "+919718344024",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Sarjapur ORR Tech Corridor, Doddakanahalli, Varthur Hobli",
-                    "addressLocality": "Bengaluru",
-                    "addressRegion": "Karnataka",
-                    "postalCode": "560035",
-                    "addressCountry": "IN"
-                  },
-                  "amenityFeature": [
-                    { "@type": "LocationFeatureSpecification", "name": "80+ Lifestyle Amenities", "value": true },
-                    { "@type": "LocationFeatureSpecification", "name": "Stepped Terraces", "value": true },
-                    { "@type": "LocationFeatureSpecification", "name": "No Common Walls", "value": true },
-                    { "@type": "LocationFeatureSpecification", "name": "4 Green Spires", "value": true }
                   ]
                 }
               ]

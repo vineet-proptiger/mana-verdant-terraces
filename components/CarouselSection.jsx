@@ -218,14 +218,14 @@ const CarouselSection = ({ setIsOpen, title = "Glimpses of Masterpiece", subtitl
                 <div 
                   key={idx}
                   className="relative w-full rounded-lg overflow-hidden cursor-pointer group"
-                  style={{ aspectRatio: '16/9', background: '#eee' }}
+                  style={{ aspectRatio: '16/9', minHeight: '200px', background: '#eee' }}
                   onClick={() => setSelectedImgIndex(idx)}
                 >
                   <Image
                     src={img.src || img.img}
                     alt={img.alt || img.title || img.label || `Gallery Image ${idx + 1}`}
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div 

@@ -1,7 +1,9 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { galleryImages } from '../lib/images'
+import { galleryInteriorImages, galleryExteriorImages } from '../../lib/mana-right-life/images'
+
+const galleryImages = [...galleryExteriorImages, ...galleryInteriorImages]
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
@@ -54,25 +56,21 @@ const Gallery = ({ setIsOpen }) => {
       <div className="container mx-auto px-4 md:px-8 max-w-[1200px]">
 
         {/* ── Header Row ── */}
-        <div className="flex flex-col items-center justify-center mb-10" data-aos="fade-down" data-aos-duration="1000">
+        <div className="flex flex-col items-center justify-center mb-10">
           <div className="flex items-center justify-center">
-            <h2
-              className="text-[22px] sm:text-[28px] md:text-[36px] font-semibold leading-tight uppercase tracking-wider text-gray-900 text-center"
-              style={{ fontFamily: "var(--font-jost), Montserrat, sans-serif", margin: 0 }}
-            >
-              Mana Verdant Terraces GALLERY
-            </h2>
+            <ArcIcon />
+            <h2 data-aos="flip-left" data-aos-delay="500" style={{
+              fontFamily: F_JOST, fontWeight: '700', fontSize: '18px',
+              color: '#684C1B', letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0,
+            }} className="text-center">MANA SKANDA THE RIGHT LIFE GALLERY</h2>
           </div>
         </div>
 
         {/* ── Image Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 transition-all duration-500 ease-in-out">
+        <div data-aos="fade-up" data-aos-delay="100" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 transition-all duration-500 ease-in-out">
           {visibleImages.map((img, idx) => (
             <div 
               key={idx}
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              data-aos-delay={(idx % 4) * 150}
               className="relative w-full cursor-pointer group overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300" 
               style={{ aspectRatio: '16/9', minHeight: '150px', background: '#eee' }}
               onClick={() => openLightbox(img.src)}
@@ -102,7 +100,7 @@ const Gallery = ({ setIsOpen }) => {
                     textTransform: 'uppercase' 
                   }}
                 >
-                  {img.label || img.title || 'VIEW PREVIEW'}
+                  {img.alt ? img.alt.replace('Mana Skanda The Right Life - ', '') : 'VIEW PREVIEW'}
                 </span>
               </div>
             </div>
@@ -120,19 +118,19 @@ const Gallery = ({ setIsOpen }) => {
                 fontSize: '12px',
                 fontWeight: '700',
                 letterSpacing: '0.15em',
-                color: '#000000',
-                border: '1.5px solid #000000',
+                color: '#684C1B',
+                border: '1px solid #D5C2A8',
                 padding: '14px 36px',
                 background: 'transparent',
                 cursor: 'pointer',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = '#000000'
+                e.currentTarget.style.background = '#684C1B'
                 e.currentTarget.style.color = '#fff'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = 'transparent'
-                e.currentTarget.style.color = '#000000'
+                e.currentTarget.style.color = '#684C1B'
               }}
             >
               {showAll ? 'SHOW LESS' : 'VIEW ALL GALLERY'}
