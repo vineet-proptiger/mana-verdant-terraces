@@ -20,7 +20,7 @@ const Footer = () => (
           About The Developer
         </h2>
         <p style={{ fontSize: '13px', color: '#ffffff', fontFamily: F_JOST, fontWeight: '700', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '12px' }}>
-          Landmark Integrated Development — Doddakanahalli, Varthur Hobli, Sarjapur ORR Tech Corridor, Bengaluru
+          Landmark Integrated Development — Sarjapur ORR Tech Corridor, Bengaluru
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
           <span style={{ width: '36px', height: '2.5px', background: '#ffffff', borderRadius: '2px' }} />

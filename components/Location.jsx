@@ -170,7 +170,7 @@ const Location = () => {
                   color: '#fff', fontSize: '12px', fontFamily: F_JOST,
                   fontWeight: '700', letterSpacing: '0.04em'
                 }}>
-                  Doddakanahalli, Varthur Hobli, Sarjapur ORR, Bengaluru
+                  Sarjapur ORR, Bengaluru
                 </span>
               </div>
             </div>

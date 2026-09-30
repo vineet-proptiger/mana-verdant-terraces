@@ -78,7 +78,7 @@ const Highlights = ({ setIsOpen }) => {
                 className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group p-7 rounded-2xl bg-white/95 backdrop-blur-sm border border-gray-200 shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.15)] hover:border-black transform transition-all duration-300 hover:-translate-y-2 flex flex-col items-center text-center cursor-default"
               >
                 {/* Modern Icon Badge */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 border border-gray-200 flex items-center justify-center text-[#000000] mb-5 shadow-xs group-hover:scale-110 group-hover:bg-[#000000] group-hover:text-white group-hover:border-black transition-all duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 border border-gray-200 flex items-center justify-center text-[#000000] mb-5 shadow-xs group-hover:scale-110 group-hover:border-black transition-all duration-300">
                   <IconComponent size={30} strokeWidth={1.9} />
                 </div>
 

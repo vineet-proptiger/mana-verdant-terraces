@@ -652,7 +652,7 @@ const Hero = ({ setIsOpen }) => {
         {/* Subtitle */}
         <p className="hero-subtitle">
           <span className="hero-subtitle-badge" style={{ fontSize: '0.9em', fontWeight: 600, textTransform: 'none' }}>
-            At Doddakanahalli, Varthur Hobli, Sarjapur ORR Tech Corridor, Bengaluru.
+            Sarjapur ORR Tech Corridor, Bengaluru.
           </span>
         </p>
         
