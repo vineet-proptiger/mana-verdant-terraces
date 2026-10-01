@@ -94,7 +94,7 @@ export default function Home() {
             </div>
             <div className="p-6 flex flex-col">
               <h3 className="text-2xl font-bold text-black mb-3">
-                Mana Skanda The Right Life
+                Mana The Right Life
               </h3>
               <p className="text-gray-600 mb-6 line-clamp-3">
                 Embrace The Right Life by Mana Skanda, where each dawn brings promise and every dusk contentment in Sarjapur Road, Bangalore East. Luxurious housing units with world-class amenities.
