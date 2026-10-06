@@ -659,10 +659,11 @@ const Hero = ({ setIsOpen }) => {
         {/* Bullet Points with Backdrop Layer (Desktop only via CSS) */}
         <div className="hero-bullets" style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           {[
-            "Avail Spot Booking Offers",
-            "Luxury 3 & 4 BHK Homes with Stepped Terraces",
-            "Spread Over 8.67 Acres Across 4 Green Spires (G+19)",
-            "Prime Sarjapur ORR Tech Corridor, Bengaluru"
+            "Luxury Living. Zero Booking Burden.",
+            "Say Yes to Luxury. Say No to Booking Costs!",
+            "YOUR 3 BHK DREAM HOME IS CLOSER THAN EVER!",
+            "Own Your Dream 3 BHK at ₹2.5 Cr* Onwards.",
+            "Make Your Move to Mana Verdant Terraces Today!"
           ].map((text, i) => (
           <div 
             key={i} 
